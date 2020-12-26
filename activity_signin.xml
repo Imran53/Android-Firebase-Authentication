@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#F8FAFA"
+    tools:context=".Signin">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Welcome Back"
+        android:textColor="#B83C38"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in to continue"
+        android:textColor="#2B2525"
+        android:textSize="18sp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="30dp"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/background_input"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_email"
+                    android:layout_marginLeft="10dp"
+                    app:tint="#CA332F" />
+
+                <EditText
+                    android:id="@+id/useremailSignin"
+                    android:ems="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@null"
+                    android:hint="Email"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="normal"/>
+            </LinearLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/background_input"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/restricted"
+                    android:layout_marginLeft="10dp"
+                    app:tint="#CA332F" />
+
+                <EditText
+
+                    android:id="@+id/userpasswordSign"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@null"
+                    android:hint="Password"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="18sp"
+                    android:textStyle="normal"/>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+
+            android:id="@+id/btn_reset_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="30dp"
+            android:background="@null"
+            android:text="Forgot Password?"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#B83C38"
+            android:layout_marginRight="30dp" />
+
+
+
+        <Button
+            android:id="@+id/button_signin"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_gradient"
+            android:text="Sign in"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+
+
+        <Button
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:text="Don't have an account? Create a new account"
+            android:textAllCaps="false"
+            android:textColor="#CA332F"
+            android:id="@+id/button_signup"/>
+
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressbar_signin"
+            android:indeterminate="true"
+            android:indeterminateTint="@android:color/white"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:visibility="invisible"
+            android:layout_marginTop="20dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
